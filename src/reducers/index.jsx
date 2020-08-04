@@ -3,7 +3,7 @@ import AddTodoReducer from './AddTodoReducer'
 
 
 export const reducer=combineReducers(
-    AddTodoReducer
+    {AddTodoReducer}
 )
 
 

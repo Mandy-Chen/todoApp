@@ -11,15 +11,15 @@ class TodoForm extends React.Component {
         }
     }
 
-    handleChange(event) {
+    handleChange =(event) =>{
         let text = event.target.value;
         this.setState ({
             text: text
         })
-
     }
 
-    submit() {
+    submit=(event)=> {
+        // event.preventDefault()
         let text=this.state.text;
         this.props.addTodo(text);
     }
@@ -27,10 +27,12 @@ class TodoForm extends React.Component {
     render() {
 
         return (
-            <form onSubmit="submit">
+            <div>
+            {/* // <form> */}
                 <input type="text" onChange={this.handleChange} value={this.state.text}/>
-                <button type="submit">add</button>
-            </form>
+                <button onClick = {this.submit}>add</button>
+            {/* // </form> */}
+            </div>
         )
     }
 }
