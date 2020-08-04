@@ -1,10 +1,9 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import TodoList from '../components/TodoList'
 
-const mapStateToProps=(state)=>{
-
+const mapStateToProps = (state) => {
     return {
-    todos:state.AddTodoReducer.todoList
+        todos: state.AddTodoReducer
     }
 }
 

@@ -7,13 +7,13 @@ class TodoList extends React.Component {
   }
 
   render() {
-   return(
-    <div>
-    {/* {this.props.todos.map((todo, index) => (
-    <Todo key={index} text={todo}></Todo>
-  ))} */}
-</div>
-   )
+    return (
+      <div>
+        {this.props.todos.map((todo, index) => (
+          <Todo key={index} text={todo}></Todo>
+        ))}
+      </div>
+    )
   }
 }
 

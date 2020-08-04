@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <TodoFormContainer></TodoFormContainer>
         <TodoListContainer></TodoListContainer>
-        <TodoFormContainer></TodoFormContainer>
+   
       </header>
     </div>
   );

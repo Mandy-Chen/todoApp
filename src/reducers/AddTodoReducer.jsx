@@ -1,13 +1,9 @@
-const AddTodoReducer = (state = {todoList: []}, action) => {
+const AddTodoReducer = (state = [], action) => {
     switch (action.type) {
         case "ADD_TODO":
-            console.log(action.text)
-            state.todoList.push(action.text)
-            return state;
-            // return {todoList: state.todoList};
+            return [...state, action.text];
         default:
             return state;
     }
-
 }
 export default AddTodoReducer;
