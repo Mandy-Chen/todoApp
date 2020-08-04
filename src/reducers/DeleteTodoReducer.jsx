@@ -1,9 +1,11 @@
-const DeleteTodoReducer = (state = [], action) => {
-    switch (action.type) {
-        case "DELETE_TODO":
-            return [...state, action.todos];
-        default:
-            return state;
-    }
-}
-export default DeleteTodoReducer;
+// const DeleteTodoReducer = (state=[], action) => {
+//     console.log(action.index+"sss")
+//     switch (action.type) {
+//         case "DELETE_TODO":
+//             return [...state, state.splice(action.index,1)];
+//         default:
+//             return state;
+//     }
+    
+// }
+// export default DeleteTodoReducer;

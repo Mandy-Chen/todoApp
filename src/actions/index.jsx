@@ -4,9 +4,9 @@ export const addTodoAction = (text) => {
         text: text,
     }
 }
-export const deleteTodoAction = (todos) => {
+export const deleteTodoAction = (index) => {
     return {
         type: "DELETE_TODO",
-        todos: todos,
+        index: index,
     }
 }

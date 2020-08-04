@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import TodoList from '../components/TodoList'
 import { deleteTodoAction } from '../actions'
+import {addTodoAction} from '../actions'
 const mapStateToProps = (state) => {
     return {
         todos: state.AddTodoReducer
@@ -8,7 +9,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => (
     {
-        deleteTodo: (todos) => { dispatch(deleteTodoAction(todos)) },
+        deleteTodo: (index) => { dispatch(deleteTodoAction(index)) },
     })
 
 const TodoListContainer = connect(
