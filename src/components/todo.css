@@ -1,10 +1,11 @@
-.todo {
+.todoList {
   background-color: #dc93ac;
   padding: 5px 10px;
   margin: 10px;
   box-shadow: 2px 3px #eee5ea;
+ 
 }
-.todo div{
+.todoList button{
     display: inline-block;
     margin-left: 10px;
 }
@@ -22,4 +23,7 @@
   font-size: 30px;
   border-radius: 10px;
   background-color: #e6cb24;
+}
+.todo{
+    display: inline-block;
 }

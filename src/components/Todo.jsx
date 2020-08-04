@@ -8,9 +8,6 @@ class Todo extends React.Component {
     render() {
         return (
             <div className="todo">{this.props.text}
-                <div>
-                    <i className="fa fa-trash" aria-hidden="true"></i>
-                </div>
             </div>
         )
     }
