@@ -4,6 +4,10 @@
   margin: 10px;
   box-shadow: 2px 3px #eee5ea;
 }
+.todo div{
+    display: inline-block;
+    margin-left: 10px;
+}
 .todoInput input {
   display: inline-block;
   height: 40px;
