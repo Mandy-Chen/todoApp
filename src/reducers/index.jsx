@@ -4,8 +4,7 @@ import DeleteTodoReducer from './DeleteTodoReducer'
 
 export const reducer = combineReducers(
     {
-        AddTodoReducer,
-        DeleteTodoReducer
+        AddTodoReducer
     }
 )
 
