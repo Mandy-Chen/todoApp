@@ -24,6 +24,15 @@
   border-radius: 10px;
   background-color: #e6cb24;
 }
-.todo{
+
+.todoMark{
+    text-decoration-line: line-through;
+    display: inline-block;
+}
+.todoUnmark{
+    text-decoration-line: none;
+    display: inline-block;
+}
+.todo_div{
     display: inline-block;
 }
