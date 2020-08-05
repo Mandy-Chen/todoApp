@@ -18,13 +18,11 @@ export default (state = initState, action) => {
     case "DELETE_TODO":
       return {
         todoList: state.todoList.filter((item) => action.id != item.id),
-      };
-    // return [...state, state.splice(action.index, 1)];
-    // return state.filter((item, index) => action.index !== index)
+      };plice(action.index, 1)];
     case "DO_MARK":
       return {
-        todoList: state.todoList.map((item, id) => {
-          if (id === action.id) {
+        todoList: state.todoList.map((item) => {
+          if (item.id === action.id) {
             item.status = !item.status;
           }
           return item;
@@ -38,4 +36,3 @@ export default (state = initState, action) => {
       return state;
   }
 };
-// export default AddTodoReducer;
