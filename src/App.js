@@ -9,9 +9,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TodoList></TodoList>
-      {/* <TodoFormContainer></TodoFormContainer> */}
-        {/* <TodoListContainer></TodoListContainer> */}
+      <TodoFormContainer></TodoFormContainer> 
+        <TodoListContainer></TodoListContainer>
    
       </header>
     </div>

@@ -4,11 +4,9 @@ const initState = {
 export default  (state = initState, action) => {
     switch (action.type) {
         case "ADD_TODO":
-            return {
-                todoList: state.todoList.concat({ text: action.text, mark: action.mark })
-            }
         // return [...state, state.concat({ text: action.text, mark: action.mark })]
-        // return [...state, action.text];
+        state = {todoList: [...state.todoList, { content: action.content, status: action.status }]}
+        return state;
         case "DELETE_TODO":
             return {
                 todoList: state.todoList.filter((item, index) => action.index !== index)
@@ -19,7 +17,7 @@ export default  (state = initState, action) => {
             return {
                 todoList: state.todoList.map((item, index) => {
                     if (index === action.index) {
-                        item.mark = !item.mark;
+                        item.status = !item.status;
                     }
                     return item;
                 })

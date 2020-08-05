@@ -1,36 +1,39 @@
-// import React from "react";
-// import './todo.css';
+import React from "react";
+import "./todo.css";
 
-// class TodoForm extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             text: ''
-//         }
-//     }
+class TodoForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: "",
+        };
+    }
 
-//     handleChange = (event) => {
-//         let text = event.target.value;
-//         this.setState({
-//             text: text
-//         })
-//     }
+    handleChange = (event) => {
+        let content = event.target.value;
+        this.setState({
+            content: content,
+        });
+    };
 
-//     submit = (event) => {
-//         let text = this.state.text;
-//         this.props.addTodo(text);
-//     }
+    submit = (event) => {
+        event.stopPropagation()
+        let content = this.state.content;
+        this.props.addTodo(content);
+    };
 
-//     render() {
-//         return (
-//             <div className="todoInput">
-//                 <input type="text" onChange={this.handleChange} value={this.state.text} />
-//                 <button onClick={this.submit}>add</button>
-              
-//             </div>
-//         )
-//     }
-// }
+    render() {
+        return (
+            <div className="todoInput">
+                <input
+                    type="text"
+                    onChange={this.handleChange}
+                   
+                />
+                <button onClick={this.submit}>add</button>
+            </div>
+        );
+    }
+}
 
-
-// export default TodoForm
+export default TodoForm;

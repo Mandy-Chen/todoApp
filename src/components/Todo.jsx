@@ -4,16 +4,15 @@ import '../../node_modules/font-awesome/css/font-awesome.min.css'
 class Todo extends React.Component {
     constructor(props) {
         super(props)
-
     }
 
     render() {
         return (
             <div>
-                <div className={this.props.mark ? "todoMark" : "todoUnmark"}
-                    onClick={this.props.marks(this.props.index, this.props.mark)}>{this.props.text}
+                <div className={this.props.status ? "todoMark" : "todoUnmark"}
+                    onClick={()=> this.props.marks(this.props.index, this.props.status)}>{this.props.content}
                 </div>
-                <button onClick={this.props.delete(this.props.index)} >
+                <button onClick={() => this.props.delete(this.props.index)} >
                     <i className="fa fa-trash" aria-hidden="true"></i>
                 </button>
             </div>
