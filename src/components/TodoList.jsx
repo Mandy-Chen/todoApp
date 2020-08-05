@@ -9,25 +9,25 @@ class TodoList extends React.Component {
   }
   }
 
-  deleteText =(index)=> {
-    this.props.deleteTodo(index);
+  deleteText =(id)=> {
+    this.props.deleteTodo(id);
     // console.log("qqqqq"+this.props)
   }
-  handlerMark = (index) => {
-    this.props.doMark(index)
+  handlerMark = (id) => {
+    this.props.doMark(id)
   }
 
   render() {
     return (
       <div>
-        {this.props.todoList.map((todo, index) =>
-          <div className="todoList"   key={index}>
+        {this.props.todoList.map((todo, id) =>
+          <div className="todoList"   key={id}>
             <Todo
               todo={todo}
               marks={this.handlerMark}
               content={todo.content}
-              index={index}
-              key={index}
+              id={todo.id}
+              key={id}
               delete={this.deleteText}
               status={todo.status}></Todo>
           </div>

@@ -9,8 +9,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => 
     {
-        return {deleteTodo: (index) =>  dispatch(deleteTodoAction(index)),
-        doMark:(index)=>dispatch(doMarkAction(index))}
+        return {deleteTodo: (id) =>  dispatch(deleteTodoAction(id)),
+        doMark:(id)=>dispatch(doMarkAction(id))}
     }
 
 const TodoListContainer = connect(

@@ -4,17 +4,18 @@ export const addTodoAction = (content) => {
     type: "ADD_TODO",
     content: content,
     status: false,
+    id:0
   };
 };
-export const deleteTodoAction = (index) => {
+export const deleteTodoAction = (id) => {
   return {
     type: "DELETE_TODO",
-    index: index,
+    id: id,
   };
 };
-export const doMarkAction = (index) => {
+export const doMarkAction = (id) => {
   return {
     type: "DO_MARK",
-    index: index,
+    id: id,
   };
 };
