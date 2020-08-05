@@ -13,14 +13,12 @@ class TodoList extends React.Component {
 
   componentDidMount() {
       getTodos().then((response)=> {
-        console.log("responseData",response.data)
         this.props.getApiTodos(response.data)
       })
   }
 
   deleteText = (id) => {
     this.props.deleteTodo(id);
-    // console.log("qqqqq"+this.props)
   };
   handlerMark = (id) => {
     this.props.doMark(id);
