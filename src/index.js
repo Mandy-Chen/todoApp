@@ -3,19 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {Provider} from 'react-redux'
-import {reducer} from './reducers/index'
-import {createStore} from 'redux'
-
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-
+import { Provider } from 'react-redux'
+import { reducer } from './reducers/index'
+import { createStore } from 'redux'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 ReactDOM.render(
-
- <Provider store={store}>
+  <Provider store={store}>
     <React.StrictMode>
-    <App />
-  </React.StrictMode>
- </Provider>,
+      <Router>
+        <div>
+          <Link to="/">All todo List</Link>
+          <br />
+          <Link to="/finished">Marked todo List</Link>
+        </div>
+        <Route exact path="/" component={App} />
+        <Route exact path="/finished" component={App} />
+      </Router>
+      {/* <App /> */}
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
