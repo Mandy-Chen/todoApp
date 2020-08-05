@@ -19,9 +19,7 @@ class TodoForm extends React.Component {
   submit = (event) => {
     event.stopPropagation();
     let content = this.state.content;
-    // this.props.addTodo(content);
     addTodos(content).then((response) => {
-      console.log("responseData", response.data);
       this.props.addTodo(content);
     });
   };

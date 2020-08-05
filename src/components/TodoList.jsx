@@ -2,6 +2,7 @@ import React from "react";
 import Todo from "./Todo";
 import "./todo.css";
 import { getTodos } from "../api/todoApi.js";
+import {deleteTodos} from "../api/todoApi.js"
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -18,6 +19,9 @@ class TodoList extends React.Component {
   }
 
   deleteText = (id) => {
+    deleteTodos(id).then((response) => {
+      console.log("responseData", response.data);
+    });
     this.props.deleteTodo(id);
   };
   handlerMark = (id) => {
