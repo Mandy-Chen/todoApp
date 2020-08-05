@@ -22,12 +22,10 @@ export default  (state = initState, action) => {
                     return item;
                 })
             }
-        // return [...state, state.map((item, index) => {
-        //     if (index === action.index) {
-        //         item.mark = !item.mark;
-        //     }
-        //     return item
-        // })]
+            case "GET_API_TODOS":
+                return{
+                    todoList:action.todos
+                }
         default:
             return state;
     }
