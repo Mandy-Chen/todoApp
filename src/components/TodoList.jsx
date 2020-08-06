@@ -4,7 +4,6 @@ import "./todo.css";
 import { getTodos } from "../api/todoApi.js";
 import { deleteTodos } from "../api/todoApi.js";
 import { updateTodos } from "../api/todoApi.js";
-
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
@@ -25,9 +24,9 @@ class TodoList extends React.Component {
     });
     this.props.deleteTodo(id);
   };
-  handlerMark = (id,status) => {
+  handlerMark = (id, status) => {
     this.props.doMark(id);
-    updateTodos(id,status).then((response) => {
+    updateTodos(id, status).then((response) => {
       console.log("responseData", response.data);
     });
 
@@ -35,21 +34,32 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.todoList.map((todo, id) => (
-          <div className="todoList" key={id}>
-            <Todo
-              todo={todo}
-              marks={this.handlerMark}
-              content={todo.content}
-              id={todo.id}
-              key={id}
-              delete={this.deleteText}
-              status={todo.status}
-            ></Todo>
-          </div>
-        ))}
-      </div>
+      <div className="main">
+      <div className="todo_content">
+        数据数据库数据数据库数据数据库数据数据库数据数据库
+    </div>
+      <div className="todo_content">
+        数据数据
+   </div>
+      <div className="todo_content">
+        数据数据数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库数据数据库
+   </div>
+   </div>
+      //   {this.props.todoList.map((todo, id) => (
+      //     <div className="todoList" key={id}>
+      //       <Todo
+      //         todo={todo}
+      //         marks={this.handlerMark}
+      //         content={todo.content}
+      //         id={todo.id}
+      //         key={id}
+      //         delete={this.deleteText}
+      //         status={todo.status}
+      //       ></Todo>
+      //     </div>
+      //   ))}
+      // </div>
+      
     );
   }
 }

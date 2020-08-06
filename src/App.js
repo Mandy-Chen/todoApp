@@ -6,10 +6,10 @@ import TodoListContainer from './containers/TodoListContainer'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <TodoFormContainer></TodoFormContainer>
         <TodoListContainer></TodoListContainer>
-      </header>
+      </header> */}
     </div>
   );
 }

@@ -11,18 +11,20 @@
 }
 .todoInput input {
   display: inline-block;
-  height: 40px;
+  height: 50px;
   margin: 3px;
+  width: 400px;
   font-size: 30px;
   border-radius: 10px;
 }
 .todoInput button {
   display: inline-block;
-  height: 40px;
+  height: 50px;
   margin: 3px;
   font-size: 30px;
   border-radius: 10px;
-  background-color: #e6cb24;
+  background-color: #cab117;
+
 }
 
 .todoMark{
@@ -35,4 +37,39 @@
 }
 .todo_div{
     display: inline-block;
+}
+.nav_button{
+  width: 150px;
+  height: 50px;
+  background:-webkit-linear-gradient(
+   left, #679694,#d4e4e3,#e0dbb9
+  );
+  border-radius: 20px;
+  box-shadow: aliceblue 3px,3px;
+  font-size: 20px;
+  
+}
+.nav_button a{
+  color: #080001;
+  text-decoration: none;
+}
+.nav_num{
+  display: inline-block;
+  width: 25px;
+  line-height: 25px;
+  border-radius: 15px;
+  background-color: #dc93ac;
+  color: white;
+  margin-left: 10px;
+}
+
+.main{
+  margin-left: 200px;
+}
+.todo_content{
+  background-color: rgb(214, 183, 142);
+  margin: 0px 0px 30px;
+  width: 480px;
+  line-height: 30px;
+  padding: 20px;
 }

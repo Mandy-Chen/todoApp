@@ -5,9 +5,7 @@ import { getTodos } from "../api/todoApi.js";
 import { deleteTodos,updateTodos } from "../api/todoApi.js";
 
 class Marked extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+ 
 
   componentDidMount() {
     getTodos().then((response) => {

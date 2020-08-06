@@ -17,7 +17,7 @@ export default (state = initState, action) => {
       return state;
     case "DELETE_TODO":
       return {
-        todoList: state.todoList.filter((item) => action.id != item.id),
+        todoList: state.todoList.filter((item) => action.id !== item.id),
       };
     case "DO_MARK":
       return {
