@@ -7,18 +7,19 @@ import { Provider } from 'react-redux'
 import { reducer } from './reducers/index'
 import { createStore } from 'redux'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import MarkedContainer from './containers/MarkedContainer'
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
         <div>
-          <Link to="/">All todo List</Link>
+          <Link to="/index">All todo List</Link>
           <br />
-          <Link to="/finished">Marked todo List</Link>
+          <Link to="/marked">Marked todo List</Link>
         </div>
-        <Route exact path="/" component={App} />
-        <Route exact path="/finished" component={App} />
+        <Route exact path="/marked" component={MarkedContainer} />
+        <Route exact path="/index" component={App} />
       </Router>
       {/* <App /> */}
     </React.StrictMode>

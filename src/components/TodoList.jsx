@@ -2,7 +2,8 @@ import React from "react";
 import Todo from "./Todo";
 import "./todo.css";
 import { getTodos } from "../api/todoApi.js";
-import {deleteTodos} from "../api/todoApi.js"
+import { deleteTodos } from "../api/todoApi.js";
+import { updateTodos } from "../api/todoApi.js";
 
 class TodoList extends React.Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class TodoList extends React.Component {
   }
 
   componentDidMount() {
-      getTodos().then((response)=> {
-        this.props.getApiTodos(response.data)
-      })
+    getTodos().then((response) => {
+      this.props.getApiTodos(response.data);
+    });
   }
 
   deleteText = (id) => {
@@ -24,8 +25,12 @@ class TodoList extends React.Component {
     });
     this.props.deleteTodo(id);
   };
-  handlerMark = (id) => {
+  handlerMark = (id,status) => {
     this.props.doMark(id);
+    updateTodos(id,status).then((response) => {
+      console.log("responseData", response.data);
+    });
+
   };
 
   render() {
