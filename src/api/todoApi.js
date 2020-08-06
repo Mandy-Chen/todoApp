@@ -1,6 +1,6 @@
 import axios from "axios";
 const base = axios.create({
-  baseURL: "https://5e9ec500fb467500166c4658.mockapi.io",
+  baseURL: "http://localhost:3000",
 });
 export const getTodos = () => {
   return base.get('/todos');
