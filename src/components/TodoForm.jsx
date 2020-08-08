@@ -22,12 +22,15 @@ class TodoForm extends React.Component {
     addTodos(content).then((response) => {
       this.props.addTodo(content);
     });
+    this.setState({
+      content:""
+    })
   };
 
   render() {
     return (
       <div className="todoInput">
-        <input type="text" onChange={this.handleChange} />
+        <input type="text" onChange={this.handleChange} value={this.state.content}/>
         <button onClick={this.submit}>add</button>
       </div>
     );

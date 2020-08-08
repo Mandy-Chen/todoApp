@@ -4,7 +4,7 @@ import "./todo.css";
 import { getTodos } from "../api/todoApi.js";
 import { deleteTodos } from "../api/todoApi.js";
 import { updateTodos } from "../api/todoApi.js";
-class TodoList extends React.Component {
+class AllTodoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class TodoList extends React.Component {
   render() {
     return (
       <div className="main">
-        {this.props.todoList.filter((todo) => !todo.status).map((todo, id) => (
+        {this.props.todoList.map((todo, id) => (
           <div className="todo_content" key={id}>
             <Todo
               todo={todo}
@@ -49,5 +49,4 @@ class TodoList extends React.Component {
     );
   }
 }
-
-export default TodoList;
+export default AllTodoList;

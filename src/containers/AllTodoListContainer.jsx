@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import TodoList from "../components/TodoList";
+import AllTodoList from "../components/AllTodoList";
 import { deleteTodoAction } from "../actions";
 import { doMarkAction } from "../actions";
 import { getApiTodosAction } from "../actions";
@@ -18,5 +18,5 @@ const mapDispatchToProps = (dispatch) => {
 const AllTodoListContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(AllTodoList);
 export default AllTodoListContainer;

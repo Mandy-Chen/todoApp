@@ -20,19 +20,16 @@ class Marked extends React.Component {
   handlerMark = (id,status) => {
     this.props.doMark(id);
     updateTodos(id,status).then((response) => {
-      console.log("responseData", response.data);
     });
 
   };
   render() {
-      console.log("www",this.props.todoList
-        .filter((todo) => todo.status === false))
     return (
-      <div>
+      <div className="main">
         {this.props.todoList
           .filter((todo) => todo.status)
           .map((todo, id) => (
-            <div className="todoList" key={id}>
+            <div className="todo_content" key={id}>
               <Todo
                 todo={todo}
                 marks={this.handlerMark}

@@ -9,9 +9,10 @@ class Todo extends React.Component {
                 <div className={this.props.status ? "todoMark" : "todoUnmark"}
                     onClick={()=> this.props.marks(this.props.id, !this.props.status)}>{this.props.content}
                 </div>
-                <button onClick={() => this.props.delete(this.props.id)} >
+                <button className="delete_btn" onClick={() => this.props.delete(this.props.id)} >
                     <i className="fa fa-trash" aria-hidden="true"></i>
                 </button>
+                <div className="clear"></div>
             </div>
         )
     }

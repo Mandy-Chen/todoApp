@@ -1,13 +1,12 @@
-.todoList {
+/* .todoList {
   background-color: #dc93ac;
   padding: 5px 10px;
   margin: 10px;
   box-shadow: 2px 3px #eee5ea;
- 
-}
-.todoList button{
-    display: inline-block;
-    margin-left: 10px;
+} */
+.todoList button {
+  display: inline-block;
+  margin-left: 10px;
 }
 .todoInput input {
   display: inline-block;
@@ -24,36 +23,32 @@
   font-size: 30px;
   border-radius: 10px;
   background-color: #cab117;
-
 }
 
-.todoMark{
-    text-decoration-line: line-through;
-    display: inline-block;
+.todoMark {
+  text-decoration-line: line-through;
+  /* display: inline-block; */
 }
-.todoUnmark{
-    text-decoration-line: none;
-    display: inline-block;
+.todoUnmark {
+  text-decoration-line: none;
+  /* display: inline-block; */
 }
-.todo_div{
-    display: inline-block;
+.todo_div {
+  display: inline-block;
 }
-.nav_button{
+.nav_button {
   width: 150px;
   height: 50px;
-  background:-webkit-linear-gradient(
-   left, #679694,#d4e4e3,#e0dbb9
-  );
+  background: -webkit-linear-gradient(left, #679694, #d4e4e3, #e0dbb9);
   border-radius: 20px;
-  box-shadow: aliceblue 3px,3px;
+  box-shadow: aliceblue 3px, 3px;
   font-size: 20px;
-  
 }
-.nav_button a{
+.nav_button a {
   color: #080001;
   text-decoration: none;
 }
-.nav_num{
+.nav_num {
   display: inline-block;
   width: 25px;
   line-height: 25px;
@@ -63,13 +58,27 @@
   margin-left: 10px;
 }
 
-.main{
+.main {
   margin-left: 200px;
+  column-count: 2;
+  column-width: 500px;
+  /* column-gap: 20px; */
 }
-.todo_content{
+.todo_content {
+  border-radius: 15px;
   background-color: rgb(214, 183, 142);
-  margin: 0px 0px 30px;
+  margin-bottom: 30px ;
   width: 480px;
   line-height: 30px;
   padding: 20px;
+  break-inside: avoid;
+}
+.todo_content:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .5);
+}
+.delete_btn {
+  float: right;
+}
+.clear {
+  clear: both;
 }
